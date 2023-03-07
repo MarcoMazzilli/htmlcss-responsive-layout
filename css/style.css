@@ -4,24 +4,25 @@
   box-sizing: border-box;
 }
 
-.container-75 {
+.container-90 {
   max-width: 1440px;
-  width: 75%;
+  width: 90%;
   min-height: 50px;
-  background-color: brown;
-}
-
-.container-100 {
-  max-width: 1200px;
-  width: 100%;
-  min-height: 50px;
-  /* background-color: royalblue; */
-  padding: 0 30px;
+  background-color: rgb(165, 42, 42);
   margin: 0 auto;
 }
 
 .d-flex {
 display: flex;
+}
+
+.d-wrap {
+  flex-wrap: wrap;
+}
+
+.debug {
+  background-color: rgba(255, 217, 0, 0.5);
+  border: 1px solid black;
 }
 
 /****************************************************************
@@ -52,7 +53,7 @@ header .mobile .col.right {
   font-size: 1.5rem ;
 }
 
-.desktop {
+header .desktop {
   display: none;
 }
 
@@ -75,9 +76,34 @@ header .desktop ul li {
 }
 
 /****************************************************************
-                    START MEDIA QUERY
+                    START MAIN STYLE
 *****************************************************************/
 
+.feature .row .col {
+  width: calc(100% / 3);
+  height: 400px; /* Da togliere */
+}
+
+.feature .row .col:first-child {
+  display: flex;
+  flex-grow: 2;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************
+                    START MEDIA QUERY
+*****************************************************************/
 
 @media screen and (min-width: 480px) {
   
@@ -87,8 +113,8 @@ header .desktop ul li {
 
 @media screen and (min-width: 960px) {
   
-  .container-100 {
-    width: 75%;
+  header .container-100 {
+    width: 90%;
   }
 
   header .mobile:nth-child(2) {
